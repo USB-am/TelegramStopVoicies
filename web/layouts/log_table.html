@@ -1,0 +1,27 @@
+<tr>
+	<th class="table-text">Status</th>
+	<th class="table-text">Date</th>
+	<th class="table-text">Name</th>
+	<th class="table-text">Exceptions</th>
+<tr>
+{% for log in logs %}
+	<tr title="{{ log.exceptions }}">
+		<td>
+			{% if log.exceptions %}
+				<span class="error-line">
+					<i class="fa-solid fa-xmark"></i>
+			{% else %}
+				<span class="valid-line">
+					<i class="fa-solid fa-check"></i>
+			{% endif %}
+			</span>
+		</td>
+		<td>{{ log.date }}</td>
+		<td>{{ log.username }}</td>
+		<td>
+			{% if log.exceptions %}
+				{{ log.exceptions }}
+			{% endif %}
+		</td>
+	</tr>
+{% endfor %}

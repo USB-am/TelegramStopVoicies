@@ -1,0 +1,162 @@
+#toolbar-container {
+	margin: 0;
+	padding-top: 3px;
+	height: 7vh;
+	box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+	vertical-align: middle;
+}
+.logo {
+	text-align: center;
+}
+#selected-lang {
+	padding: 0;
+	padding-top: 5px;
+	text-align: center;
+	position: relative;
+}
+.flag {
+	width: 40px;
+	height: 30px;
+	border: 1px solid black;
+	cursor: pointer;
+}
+#lang-list-container {
+	position: absolute;
+	top: 7vh;
+	right: 10%;
+	z-index: 1000;
+	display: none;
+	width: 150px;
+	border: 1px solid #f0f0f0;
+	background: #fff;
+	cursor: pointer;
+	padding: 0 7%;
+}
+.lang-item {
+	width: 150px;
+	padding: 5%;
+	transition: .3s;
+	margin-top: 3px;
+}
+.lang-item:hover {
+	transition: .3s;
+	background: #eee;
+}
+
+.top-panel {
+	position: relative;
+	height: 43%;
+	text-align: center;
+	vertical-align: bottom;
+}
+.status-container {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+.status-container h2 {
+	margin-left: -100%;
+}
+.deactivate {
+	color: red;
+}
+.activate {
+	color: green;
+}
+
+.middle-panel {
+	height: 57%;
+	text-align: center;
+}
+
+#main-container {
+	height: 50vh;
+}
+.start-btn {
+	/*background: #ff4057;*/
+	background: lightgreen;
+	border: none;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+	padding: 1rem;
+	transform: scale(1, 1);
+	transition: .3s;
+}
+.start-btn:hover {
+	transition: .3s;
+	/*background: #ff4057;*/
+	/*background: lightgreen;*/
+}
+.start-btn i {
+	color: #eee;
+	font-size: 1.5rem;
+}
+.start-btn:hover {
+	animation: pulse 0.7s ease-out 1;
+	outline: none;
+}
+.pressed {
+	background: #ff4057;
+}
+@keyframes pulse {
+	0%   { transform: scale(  1,   1); }
+	20%  { transform: scale(0.8, 1.2); }
+	40%  { transform: scale(1.3, 0.7); }
+	60%  { transform: scale(0.8, 1.2); }
+	80%  { transform: scale(1.1, 0.9); }
+	100% { transform: scale(0.9, 1.1); }
+	100% { transform: scale(  1,   1); }
+}
+
+#footer {
+	height: 40vh;
+	padding: 0 10%;
+	/*border: 1px solid black;*/
+}
+.log-container {
+	height: 100%;
+}
+.log-toolbar {
+	height: 20%;
+	text-align: right;
+}
+#update_logs {
+	border: none;
+	transition: .3s;
+	color: #aaa;
+	background: none;
+}
+#update_logs:hover {
+	transition: .3s;
+	color: #000;
+}
+.log-table-container {
+	overflow-y: auto;
+	height: 80%;
+}
+.log-table {
+	width: 100%;
+}
+.log-table td, .log-table th {
+	text-align: center;
+	border: 1px solid black;
+	cursor: pointer;
+	transition: .3s;
+}
+.log-table tr {transition: .3s;}
+.log-table tr:hover {
+	transition: .3s;
+	box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.10);
+}
+.log-table td:hover, .log-table th:hover {
+	transition: .3s;
+	background: #efefef;
+}
+.valid-line {
+	color: lightgreen;
+}
+.error-line {
+	color: red;
+}
